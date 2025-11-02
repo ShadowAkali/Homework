@@ -1,0 +1,26 @@
+Program: Liczby podzielne przez k w przedziale 50 – 100
+
+Opis:
+Program w języku C pobiera od użytkownika dodatnią liczbę całkowitą k, a następnie wypisuje wszystkie liczby z przedziału od 50 do 100, które są podzielne przez k.
+Jeśli żadna liczba w tym zakresie nie spełnia warunku, program wyświetla odpowiedni komunikat.
+
+Sposób działania: 
+1. Użytkownik wprowadza wartość k.
+2. Program sprawdza poprawność danych wejściowych (czy k jest dodatnią liczbą całkowitą).
+3. Dla każdej liczby od 50 do 100 program sprawdza, czy jest podzielna przez k.
+4. Wyniki są wypisywane w konsoli.
+
+Przykład działania:
+Podaj dodatnią liczbę całkowitą k: 7
+Liczby z przedziału 50-100 podzielne przez 7:
+56
+63
+70
+77
+84
+91
+98
+
+Sposób kompilacji:
+gcc main.c -o program
+program.exe
