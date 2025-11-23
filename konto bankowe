@@ -1,0 +1,77 @@
+#include <stdio.h>
+#define LICZBA_KONT 100
+
+int main() {
+    double saldo[LICZBA_KONT];
+    int opcja;
+    int konto;
+    double kwota;
+
+    // Inicjalizacja kont
+    for (int i = 0; i < LICZBA_KONT; i++) {
+        saldo[i] = 0.0;
+    }
+    printf("=== BANK SYSTEM ===\n");
+    do {
+        printf("\nMENU:\n");
+        printf("0 - Zakoncz program\n");
+        printf("1 - Wplata (DEPOSIT)\n");
+        printf("2 - Wyplata (WITHDRAW)\n");
+        printf("3 - Wyswietl saldo (SHOW)\n");
+        printf("Wybor: ");
+        scanf("%d", &opcja);
+
+        if (opcja == 1) {  
+            // WPŁATA
+            printf("Podaj numer konta (0-99): ");
+            scanf("%d", &konto);
+
+            if (konto < 0 || konto >= LICZBA_KONT) {
+                printf("BLAD: zly numer konta!\n");
+            } else {
+                printf("Podaj kwote: ");
+                scanf("%lf", &kwota);
+
+                if (kwota < 0) {
+                    printf("BLAD: kwota musi byc >= 0!\n");
+                } else {
+                    saldo[konto] += kwota;
+                    printf("DEPOSIT OK. Konto %d nowe saldo: %.2f\n", konto, saldo[konto]);
+                }
+            }
+
+        } else if (opcja == 2) {  
+            // WYPŁATA
+            printf("Podaj numer konta (0-99): ");
+            scanf("%d", &konto);
+            if (konto < 0 || konto >= LICZBA_KONT) {
+                printf("BLAD: zly numer konta!\n");
+            } else {
+                printf("Podaj kwote: ");
+                scanf("%lf", &kwota);
+                if (kwota < 0) {
+                    printf("BLAD: kwota musi byc >= 0!\n");
+                } else if (saldo[konto] < kwota) {
+                    printf("WITHDRAW ERROR: za malo srodkow na kontie %d.\n", konto);
+                } else {
+                    saldo[konto] -= kwota;
+                    printf("WITHDRAW OK. Konto %d nowe saldo: %.2f\n", konto, saldo[konto]);
+                }
+            }
+        } else if (opcja == 3) {  
+            // WYŚWIETLANIE SALDA
+            printf("Podaj numer konta (0-99): ");
+            scanf("%d", &konto);
+            if (konto < 0 || konto >= LICZBA_KONT) {
+                printf("BLAD: zly numer konta!\n");
+            } else {
+                printf("SHOW: konto %d saldo = %.2f\n", konto, saldo[konto]);
+            }
+        } else if (opcja == 0) {
+            printf("Koniec programu.\n");
+        } else {
+            printf("Nieznana opcja! Wybierz 0-3.\n");
+        }
+    } while (opcja != 0);
+    return 0;
+}
