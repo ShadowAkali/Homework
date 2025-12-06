@@ -1,0 +1,13 @@
+Program wczytuje tekst wygenerowany przez użytkownika za pomocą funkcji fgets,
+a następnie oblicza jego długość przy użyciu własnej funkcji my_strlen, która zlicza znaki bez korzystania z bibliotecznego strlen.
+Program ignoruje końcowy znak nowej linii (\n) o ile został wczytany.
+Przykładowe zadania dla sprawdzenai czy program działa prawidłowo: 
+Przykład 1:
+Wejście: "Ola ma kota"
+Wyjście: "Długość twojego tekstu to: 11 znaków"
+Przykład 2:
+Wejście: "Nie moge się doczekać wycieczki do Warszawy"
+Wyjście: "mieści się dokładnie 43 znaki"
+Last przykład: 3
+Wejście: "Hello world!"
+Wyjście: "Długość twojego tekstu to: 12 znaków"
