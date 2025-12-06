@@ -1,0 +1,16 @@
+Będzie to program, którą jest prostą aplikacją bankową obsługującą dla ponad 100 kont. Umożliwia wykonanie trzech operacji taki jak m.in: 
+wpłaty, wypłaty oraz wyświetlenia salda wybranego konta.
+Kod został zrefaktoryzowany tak, aby logika była podzielona na pewne funkcje jak
+deposit, withdraw, show_balance oraz print_menu, dzięki czemu program jest czytelniejszy i łatwiejszy w utrzymaniu.
+Dla porównania zadanie które pomoże w zrozumieniu programu.
+Wejście przez:
+1(Desposit, gdzie wybieramy numer konta do którego chcemy dać saldo)
+5(numer konta do którego zmieniamy saldo)
+100(Ilość jak została wpłacona na saldo)
+3(tryb Show balance)
+5(ten sam numer konta)
+0(Exit z pgoramu)
+Mianowicie powino wyglądać to tak:
+DEPOSIT OK. Konto 5 nowe saldo: 100.00
+SHOW: Konto 5 saldo = 100.00
+Koniec programu.
