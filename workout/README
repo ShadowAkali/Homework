@@ -1,0 +1,54 @@
+Program jest napisany w języku C oraz służący do prowadzenia dziennika treningów (workout log).
+Umożliwia dodawanie, usuwanie i przeglądanie treningów oraz generowanie prostych raportów statystycznych.
+Na początku kompilacja programu: gcc -Wall -Wextra Workout.c -o Workout
+Urochomienie programu: ./Workout
+Dane struktury są zapisywane w typdef struct, gdzie mamy napisane zakres traning id na dzień, miesiąc i rok oraz wyniki są zapisywane w minutach.
+Instrukcja użycia programu:
+1. Dodaj trening: pozwala wprowadzić nowy trening (ID, data, typ aktywności, czas w minutach).
+2. Usuń trening: usuwa istniejący trening na podstawie jego identyfikatora.
+3. Wypisz treningi z miesiąca: wyświetla wszystkie treningi z wybranego miesiąca i roku.
+4. Łączny czas w miesiącu: oblicza całkowity czas treningów w danym miesiącu.
+5. Łączny czas dla typu: oblicza całkowity czas treningów dla wskazanego typu aktywności.
+6. Raporty: generuje raport najdłuższego treningu oraz najczęściej występującego typu aktywności.
+Program zawiere też walidacje danych poprzez:
+1. Sprawdzanie poprawności dat 
+2. Blokowanie ujemnych i zerowych wartości czasu trwania
+3. Wymuszanie unikalności training_id
+4. Blokowanie operacji na nieistniejących rekordach
+5. Obsługę pustej listy treningów
+Program zawiera  także ograniczenia w projekcie gdzie są to jak:
+1. Brak zapisu i doczytu danych z plików na którym jest zapisany
+2. Brak używania pamięci dynamicznej
+3. Ograniczenie treningów do 100
+Program posiada menu:
+1. Dodaj trening
+2. Usun trening
+3. Wypisz treningi z miesiaca
+4. Łączny czas w miesiącu
+5. Łączny czas dla typu
+6. Najdłuższy trening
+7. Najczęstszy typ aktywności
+0. Wyjście
+Przykładowe zadania dla programu:
+I:
+ID treningu: 1
+Data (dd mm rrrr): 20 12 2025
+Typ aktywności: cardio
+Czas w minutach: 45
+II:
+ID treningu: 2
+Data (dd mm rrrr): 20 12 2025
+Typ aktywności: FBW
+Czas w minutach: 35
+III:
+ID treningu: 3
+Data (dd mm rrrr): 10 01 2026
+Typ aktywności: PushLegs
+Czas w minutach: 25
+IV:
+ID treningu: 4
+Data (dd mm rrrr): 07 01 2026
+Typ aktywności: Hantle
+Czas w minutach: 20
+Trening ID 1 i 2 są łaczne gdzie w programie może wyliczyć czas łaczny wykonanej aktywności.
+Program jest zrobiony na wymaganiach co były przedstawione w załaczniku.
